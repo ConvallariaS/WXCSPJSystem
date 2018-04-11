@@ -1,0 +1,62 @@
+<!--details.wxml-->
+<import src="../entry-form-item/entry-form-item-tpl.wxml"/>
+
+<view class="container">
+  <view class="container-body detail-content">
+    <view class="detail-top">
+      <view class="detail-info">
+        <view class="detail-title">
+          <text>{{job.title}}</text>
+        </view>
+        <view class="detail-list">
+          <view class="detail-item">
+            <text class="text-left">工资：</text>
+            <text class="text-right"><text class="text-red">{{job.price}}</text>元/天</text>
+          </view>
+          <view class="detail-item">
+            <text class="text-left">人数：</text>
+            <text class="text-right">100人</text>
+          </view>
+          <view class="detail-item">
+            <text class="text-left">地点：</text>
+            <text class="text-right">成都龙泉驿区</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="detail-block">
+      <view class="detail-block-title">职位详情</view>
+      <view class="detail-block-content">
+        <view class="detail-description">平台工作室配置办公桌、椅、文件柜等办公家具，提供空调、网络配套到位，入驻机构可以实现“拎包试制”的便捷创业梦想。平台设立了集商务洽谈、产品展示、沙龙论坛等多功能为一体的商务中心，以及会议室，供学习交流，参观访问。</view>
+        <view class="detail-description">特色描述：长三角创业汇免费办理公司注册、创业辅导、财务记账、税务咨询、创业孵化、创新大赛、创业营活动、项目转化、创新基金申报、交流合作、市场调研、宣传推广、会务会展、评估认证、法律援助、资金扶持等，为青年创业者提供信息、渠道、场地、资金等支持和服务。</view>
+        <view class="detail-description">地点描述：交通便利，可乘坐公交或地铁，及多处基础设施建设，银行、医院、餐饮</view>
+      </view>
+    </view>
+    <view class="detail-block">
+      <view class="detail-block-title">工作时间</view>
+      <view class="detail-block-content">
+        <view class="detail-description">开始时间：2018-02-19</view>
+        <view class="detail-description">结束时间：2018-04-19</view>
+      </view>
+    </view>
+    <view class="detail-block">
+      <view class="detail-block-title">面试地点</view>
+      <view class="detail-block-content">
+        <view class="detail-description"  bindtap="navigateToMap">成都龙泉驿区</view>
+      </view>
+    </view>
+    <view class="detail-block">
+      <view class="detail-block-title">公司名称</view>
+      <view class="detail-block-content">
+        <view class="detail-description">信息科技有限公司</view>
+      </view>
+    </view>
+    <view class="detail-block">
+      <view class="detail-block-content">
+        <view class="detail-warning">防骗警示：未标明收费的职位不会收取任何费用，若商家要求缴纳费用或押金，请提高警惕并第一时间向我们举报！</view>
+      </view>
+    </view>
+  </view>
+</view>
+<template is="entryFormItemTpl" data="{{showEntryFormPanel : showEntryFormPanel}}"/>

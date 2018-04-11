@@ -1,0 +1,25 @@
+/* myjob.wxss */
+.swiper-tab{
+  width: 100%;
+  border-bottom: 2rpx solid #eee;
+  text-align: center;
+  line-height: 80rpx;
+}
+.swiper-tab-list{
+  display: inline-block;
+  width: 25%;
+  color: #777777;
+}
+.on{
+  border-bottom: 2rpx solid #0a6cbd;
+  color: #323232;
+}
+.swiper-box{
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.swiper-box view{
+  text-align: center;
+}

@@ -1,0 +1,20 @@
+<!--mywallet.wxml-->
+<view class="container">
+  <view class="money">
+    <text>账户余额 :   元</text>
+    <button class="btnset green" hover-class="press" bindtap="jumpToWithdrawal">申请提现</button>
+  </view>
+
+  <view class="walletinfo">
+    <navigator class="item" url="mywalletset/mywalletset">
+      <text>钱包设置</text>
+      <image class="you" src="../../../images/xiangyou1.png" mode="aspectFit"></image>
+    </navigator>
+    <navigator class="item" url="mywalletexplain/mywalletexplain">
+      <text>使用说明</text>
+      <image class="you" src="../../../images/xiangyou1.png" mode="aspectFit"></image>
+    </navigator>
+    
+  </view>
+
+</view>

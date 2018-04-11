@@ -1,0 +1,29 @@
+/**index.wxss**/
+@import "job-item/job-item-tpl.wxss";
+.index-top{
+  width: 100%;
+  height: 250rpx;
+}
+.search{
+  width: 100%;
+  background: #a6eafd;
+}
+.searchbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50rpx;
+}
+.searchbtn{
+  width: 180rpx;
+  min-height: 80rpx;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #a6eafd;
+}
+.information{
+  width: 100%;
+}
+

@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<import src="job-item/job-item-tpl.wxml"/>
+<view class="container">
+  <view class="index-top" style="background-image: url('../../images/yumao.jpg');background-size: cover">
+  </view>
+
+  <scroll-view class="page_body" scroll-y="true" bindscrolltolower="loadMore">
+  <!--search-->
+    <view class="search">
+      <view class="searchbar">
+        <icon class="searchicon" size="20" type="search"></icon>
+        <input type="text" maxlength="12" placeholder="请输入关键词查询" bindinput="inputSearch"></input>
+        <button class="searchbtn" bindtap="SearchJob">搜索</button>
+      </view>
+    </view>
+  <!--list-->
+    <view class="information">
+      <block wx:for="{{jobList}}" wx:for-item="item" wx:for-index="idx" wx:key="">
+        <view bindtap="navigateToDetail" data-job-id="{{item.jobId}}">
+          <template is="jobItemTpl" data="{{...item}}"/>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>
+

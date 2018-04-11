@@ -1,0 +1,30 @@
+<!--mine.wxml-->
+<view class="container">
+  <view id="header" style="background-image: url('../../images/yumao.jpg');background-size: contain">
+    <view class="content">
+    	<image src="{{userInfo.avatarUrl}}"></image>
+        <view class="nickname">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+
+  <view class="list">
+    <navigator class="my-item" url="../mine/myjob/myjob">
+      <image class="image1" src="../../images/icon_jianzhi.png" mode="aspectFit"></image>
+		  <text>我的兼职</text>
+      <image class="you" src="../../images/xiangyou1.png" mode="aspectFit"></image>
+    </navigator>
+
+    <navigator class="my-item" url="../mine/mywallet/mywallet">
+      <image class="image1" src="../../images/icon_wallet.png" mode="aspectFit"></image>
+		  <text>我的钱包</text>
+      <image class="you" src="../../images/xiangyou1.png" mode="aspectFit"></image>
+    </navigator>
+  
+    <navigator class="my-item" url="../mine/myresume/myresume">
+      <image class="image1" src="../../images/icon_resume.png" mode="aspectFit"></image>
+		  <text>我的简历</text>
+      <image class="you" src="../../images/xiangyou1.png" mode="aspectFit"></image>
+    </navigator>
+
+  </view>
+</view>

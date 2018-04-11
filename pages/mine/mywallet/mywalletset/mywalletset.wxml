@@ -1,0 +1,13 @@
+<!--mywalletset.wxml-->
+<view class="container">
+  <view class="walletset">
+    <button class="item1 green" bindtap="jumpToAddBankCard">添加银行卡</button>
+    <button class="item2 green" bindtap="jumpToAddAlipay">添加支付宝</button>
+  </view>
+
+  <view>
+    <text>显示添加的银行卡信息\n</text>
+    <text>显示添加的支付宝信息</text>
+  </view>
+
+</view>

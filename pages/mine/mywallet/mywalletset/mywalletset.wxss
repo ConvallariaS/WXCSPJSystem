@@ -1,0 +1,25 @@
+/* mywalletset.wxss */
+.walletset{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.item1{
+  width: 280rpx;
+  min-height: 60rpx;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 30rpx;
+}
+.item2{
+  width: 280rpx;
+  min-height: 60rpx;
+  border-radius: 5px;
+  text-align: center;
+}
+.green{
+  background-color: #a6eafd;
+  color: #ffffff;
+}

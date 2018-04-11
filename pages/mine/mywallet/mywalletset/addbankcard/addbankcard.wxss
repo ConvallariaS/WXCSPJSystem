@@ -1,0 +1,16 @@
+/* pages/addbankcard/addbankcard.wxss */
+.warninfo{
+  padding: 0 30rpx;
+}
+
+.btncode{
+  width: 200rpx;
+  height: 80rpx;
+  font-size: 28rpx;
+  border-radius: 5rpx;
+  text-align: center;
+  background-color: #a6eafd;
+}
+.cardbtn{
+  background-color: #a6eafd;
+}

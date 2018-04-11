@@ -1,0 +1,83 @@
+<!--myresume.wxml-->
+
+<view class="container">
+	<view class="group">
+		<view class="group-header">基本信息</view>
+		<view class="group-body">
+			<view class="input-list">
+
+				<view class="input-item">
+					<text class="input-item-label">姓名</text>
+					<view class="input-item-content">
+						<input type="text" placeholder="请输入您的姓名"></input>
+					</view>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">电话号码</text>
+					<view class="input-item-content">
+						<input type="text" placeholder="请输入电话号码"></input>
+					</view>
+				</view>
+        <view class="input-item">
+					<text class="input-item-label">身份证号</text>
+					<view class="input-item-content">
+						<input type="text" placeholder="请输入身份证号码"></input>
+					</view>
+				</view>	
+			</view>
+		</view>
+
+    <view class="group-header">求职信息</view>
+		<view class="group-body">
+			<view class="input-list">
+				<view class="input-item">
+					<text class="input-item-label">求职城市</text>
+					<picker class="input-item-content" bindchange="bindPickerChange" data-pickername="city" value="{{region}}" custom-item="{{customItem}}" mode="region">{{region[0]}},{{region[1]}},{{region[2]}}
+					</picker>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">求职意向</text>
+					<picker class="input-item-content" bindchange="bindPickerChange" data-pickername="job" value="{{jobindex}}" range="{{jobarr}}" mode="selector">{{jobarr[jobindex]}}
+					</picker>
+				</view>		
+			</view>
+		</view>
+
+    <view class="group-header">学历信息</view>
+		<view class="group-body">
+			<view class="input-list">
+				<view class="input-item">
+					<text class="input-item-label">所属学校</text>
+					<view class="input-item-content">
+						<input type="text" placeholder="请输入您想要工作的城市"></input>
+					</view>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">最高学历</text>
+					<picker class="input-item-content" bindchange="bindPickerChange" data-pickername="education" value="{{educationindex}}" range="{{educationarr}}" mode="selector">{{educationarr[educationindex]}}
+					</picker>
+				</view>	
+        <view class="input-item">
+					<text class="input-item-label">入学时间</text>
+					<picker class="input-item-content" bindchange="bindPickerChange" data-pickername="dates" value="{{dates}}" start="1990-01-01" end="2018-12-31" mode="date">{{dates}}
+					</picker>
+				</view>	
+			</view>
+		</view>
+
+    <view class="group-header">空闲时间</view>
+		<view class="group-body">
+			<view class="input-list">
+				<view class="input-item">
+					<text class="input-item-label">空闲时间</text>
+					<text>还没有写----------------------------</text>
+				</view>	
+			</view>
+		</view>
+  </view>
+
+  <view class="btn-submit">
+		<button class="btn-block btn-green" bindtap="applySubmit">保存</button>
+	</view>
+
+</view>
