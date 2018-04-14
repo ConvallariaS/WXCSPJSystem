@@ -69,4 +69,21 @@
 .detail-warning{
   font-size: 28rpx;
   color: #777;
+  padding: 20rpx;
+}
+.bottombtn{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 5rpx solid #eee;
+}
+.sharebtn{
+  flex: 0 0 30%;
+}
+.entrybtn{
+  flex: 0 0 70%;
+  background: #a6eafd;
 }

@@ -1,5 +1,4 @@
 <!--details.wxml-->
-<import src="entry-form-item/entry-form-item-tpl.wxml"/>
 <view class="container">
   <view class="container-body detail-content">
     <view class="detail-top">
@@ -56,6 +55,11 @@
         <view class="detail-warning">防骗警示：未标明收费的职位不会收取任何费用，若商家要求缴纳费用或押金，请提高警惕并第一时间向我们举报！</view>
       </view>
     </view>
+    <view class="detail-block">
+      <view class="bottombtn">
+        <button class="sharebtn" open-type="share">分享</button>
+        <button class="entrybtn" bindtap="goApply">报名参加</button>
+      </view>
+    </view>
   </view>
 </view>
-<template is="entryFormItemTpl" data="{{showEntryFormPanel : showEntryFormPanel}}"/>

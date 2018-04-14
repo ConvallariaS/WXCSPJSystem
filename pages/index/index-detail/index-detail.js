@@ -5,7 +5,7 @@ var app = getApp()
 Page({
 
   data: {
-    showEntryFormPanel: false
+    
   },
 
   /**
@@ -23,8 +23,8 @@ Page({
    * 报名参加
    */
   goApply: function () {
-    this.setData({
-      showEntryFormPanel: !this.data.showEntryFormPanel
+    wx.navigateTo({
+      url: 'apply/apply',
     })
   },
   navigateToMap: function (e) {

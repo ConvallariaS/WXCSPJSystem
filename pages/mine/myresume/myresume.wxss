@@ -9,6 +9,15 @@
   padding: 0 20rpx;
   background: #f9f9f9;
 }
+.group-header::before{
+  content: '';
+	display: inline-block;
+	vertical-align: -6rpx;
+	width: 10rpx;
+	height: 70rpx;
+	background: #07fb42;
+	margin-right: 8rpx;
+}
 .group-body{
   background: #fff;
   border-top: 1rpx solid #ddd;
