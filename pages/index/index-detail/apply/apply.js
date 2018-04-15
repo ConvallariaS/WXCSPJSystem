@@ -7,8 +7,8 @@ Page({
   data: {
     workday:[],
     addr:[],
-    isSelect: false,
-    selected: false
+    workflag: false,
+    addrflag: false
   },
 
   /**
@@ -32,21 +32,69 @@ Page({
   },
 
   selectTimeOk: function(e) {
-    const index = e.currentTarget.dataset.index;
-    let workday = this.data.workday;
-    const isSelect = workday[index].isSelect;
-    workday[index].isSelect = !isSelect;
-    this.setData({
-      workday: workday
-    })
+    var that = this
+    for(var i = 0; i < that.data.workday.length; i++) {
+      if(e.currentTarget.dataset.index == i) {
+        that.data.workday[i].isSelect = true
+        this.data.workflag = true;
+      }
+      else {
+        that.data.workday[i].isSelect = false
+      }
+    }
+    that.setData(that.data)
   },
   selectAddrOk: function(e) {
-    const index = e.currentTarget.dataset.index;
-    let addr = this.data.addr;
-    const selected = addr[index].selected;
-    addr[index].selected = !selected;
-    this.setData({
-      addr: addr
+    var that = this
+    for (var i = 0; i < that.data.addr.length; i++) {
+      if (e.currentTarget.dataset.index == i) {
+        that.data.addr[i].selected = true
+        that.data.addrflag = true
+      }
+      else {
+        that.data.addr[i].selected = false
+      }
+    }
+    that.setData(that.data)
+  },
+  goBack: function() {
+    wx.navigateBack({
+      delta: 1
     })
-  }
+  },
+  showOk: function() {
+    if(this.data.workflag && this.data.addrflag) {
+      wx.showToast({
+        title: '报名成功',
+        icon: 'success',
+        duration: 2000,
+        success: function () {
+          wx.navigateBack({
+            delta: 2
+          })
+        }
+      })
+    } else if (!this.data.workflag){
+      wx.showToast({
+        title: '请选择工作时间',
+        icon: 'warn',
+        duration: 2000,
+        mask: true
+      })
+    } else if (!this.data.addrflag) {
+      wx.showToast({
+        title: '请选择工作地点',
+        icon: 'warn',
+        duration: 2000,
+        mask: true
+      })
+    } else {
+      wx.showToast({
+        title: '请选择工作时间和地点',
+        icon: 'warn',
+        duration: 2000,
+        mask: true
+      })
+    }   
+  },
 })
